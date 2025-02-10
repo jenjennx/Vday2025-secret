@@ -53,70 +53,53 @@ h1 {
 
 /* Bouquet Section */
 .bouquet-container {
-    margin-top: 30px;
-}
-
-.bouquet-text {
-    font-size: 18px;
-    color: #ff4d6d;
-    margin-bottom: 10px;
-}
-
-/* Bouquet Arrangement */
-.bouquet {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    position: relative;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe3f1; /* Pastel pink background */
+    font-family: 'Arial', sans-serif;
 }
 
-/* Roses */
-.rose-container {
-    display: flex;
-    gap: 8px;
+.container {
+    text-align: center;
 }
 
-.rose {
-    width: 30px;
-    height: 30px;
-    background-color: pink;
-    border-radius: 50%;
-    position: relative;
-    transform: scale(0); /* Start hidden */
-    transition: transform 0.5s ease-in-out;
+h1 {
+    font-size: 2rem;
+    color: #d81b60;
+    margin-bottom: 20px;
 }
 
-/* Rose Colors */
-.rose.red {
-    background-color: #ff4d6d;
+/* Pixel Art Styling */
+.pixel-art {
+    display: grid;
+    grid-template-columns: repeat(6, 20px);
+    grid-gap: 1px;
+    margin: 0 auto;
 }
 
-.rose.pink {
-    background-color: #ffb3c6;
+.pixel {
+    width: 20px;
+    height: 20px;
 }
 
-.rose.peach {
-    background-color: #ff9999;
+.transparent {
+    background-color: transparent;
 }
 
-/* Rose Stems */
-.rose::after {
-    content: "";
-    width: 4px;
-    height: 50px;
-    background-color: green;
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+.red {
+    background-color: #f44336; /* Bright red */
 }
 
-/* Rose Bloom Animation */
-.rose.show {
-    transform: scale(1);
+.dark-red {
+    background-color: #b71c1c; /* Dark red */
 }
 
+.green {
+    background-color: #4caf50; /* Green for the stem */
+}
 /* Love Message Fade-In */
 #rose-message {
     font-size: 20px;
