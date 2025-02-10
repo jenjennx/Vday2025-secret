@@ -8,6 +8,7 @@ body {
 }
 
 .container {
+    display: flex;
     max-width: 600px;
     margin: auto;
     background: white;
@@ -54,11 +55,13 @@ h1 {
 /* Animated Rose Bouquet */
     
 .bouquet-container {
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 h1 {
@@ -78,6 +81,7 @@ h1 {
 .pixel {
     width: 20px;
     height: 20px;
+    opacity: 0;
 }
 
 .transparent {
