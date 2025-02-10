@@ -1,118 +1,32 @@
-/* General Cute Pastel Theme */
-body {
-    font-family: 'Gill sans';
-    text-align: center;
-    background-color: #ffeaf4;
-    color: #d63384;
-    margin: 0;
-    padding: 20px;
+const messages = [
+    "You make my heart skip a beat! 💓",
+    "Every moment with you is magical! ✨",
+    "You are my sunshine on a rainy day! ☀️",
+    "I love you more than words can say! ❤️"
+];
+
+function showMessage(index) {
+    let messageElement = document.getElementById("message");
+    messageElement.textContent = messages[index];
+    messageElement.classList.remove("hidden");
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: #fffaf5;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+// Gradually show the roses (Auto-start on page load)
+function revealRoses() {
+    const roses = document.querySelectorAll(".rose"); // Select all roses
+
+    roses.forEach((rose, index) => {
+        setTimeout(() => {
+            rose.classList.add("show"); // Add class to make roses appear
+        }, index * 600); // Staggered blooming effect
+    });
+
+    setTimeout(() => {
+        document.getElementById("rose-message").style.opacity = "1"; // Show message
+    }, roses.length * 600 + 1000);
 }
 
-h1 {
-    font-size: 24px;
-    color: #ff6699;
-}
-
-.hearts {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.heart {
-    font-size: 50px;
-    cursor: pointer;
-    margin: 10px;
-    transition: transform 0.3s;
-}
-
-.heart:hover {
-    transform: scale(1.2);
-}
-
-.hidden {
-    display: none;
-    font-size: 20px;
-    margin-top: 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Bouquet Section */
-.bouquet-container {
-    margin-top: 30px;
-}
-
-.bouquet-text {
-    font-size: 18px;
-    color: #ff4d6d;
-    margin-bottom: 10px;
-}
-
-/* Bouquet Arrangement */
-.bouquet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-}
-
-/* Roses */
-.rose-container {
-    display: flex;
-    gap: 8px;
-}
-
-.rose {
-    width: 30px;
-    height: 30px;
-    background-color: pink;
-    border-radius: 50%;
-    position: relative;
-    transform: scale(0); /* Start hidden */
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Rose Colors */
-.rose.red {
-    background-color: #ff4d6d;
-}
-
-.rose.pink {
-    background-color: #ffb3c6;
-}
-
-.rose.peach {
-    background-color: #ff9999;
-}
-
-/* Rose Stems */
-.rose::after {
-    content: "";
-    width: 4px;
-    height: 50px;
-    background-color: green;
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Rose Bloom Animation */
-.rose.show {
-    transform: scale(1);
-}
+// Run bouquet animation automatically on page load
+window.onload = function() {
+    setTimeout(revealRoses, 500);
+};
