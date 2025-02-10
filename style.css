@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Gill sans', sans-serif;
     text-align: center;
     background-color: #ffe6e6;
     color: #d63384;
@@ -17,7 +17,9 @@ body {
 }
 
 h1 {
+    font-family: Cursive
     font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .hearts {
@@ -53,6 +55,10 @@ h1 {
     
 .bouquet-container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
