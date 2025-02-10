@@ -8,7 +8,6 @@ body {
 }
 
 .container {
-    display: flex;
     max-width: 600px;
     margin: auto;
     background: white;
@@ -56,8 +55,6 @@ h1 {
     
 .bouquet-container {
     text-align: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
