@@ -51,51 +51,48 @@ h1 {
 
 /* Animated Rose Bouquet */
 .bouquet-container {
-    margin-top: 30px;
+    text-align: center;
 }
 
-.bouquet-text {
-    font-size: 18px;
-    color: #b30000;
-    margin-bottom: 10px;
+h1 {
+    font-size: 2rem;
+    color: #d81b60;
+    margin-bottom: 20px;
 }
 
-.bouquet {
-    display: flex;
-    justify-content: center;
-    position: relative;
+/* Pixel Art Styling */
+.pixel-art {
+    display: grid;
+    grid-template-columns: repeat(7, 20px);
+    grid-gap: 1px;
+    margin: 0 auto;
 }
 
-.rose {
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    border-radius: 50%;
-    margin: 5px;
-    position: relative;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+.pixel {
+    width: 20px;
+    height: 20px;
 }
 
-/* Rose Animation */
-.rose::before {
-    content: "";
-    width: 8px;
-    height: 50px;
-    background-color: green;
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+.transparent {
+    background-color: transparent;
 }
 
-.bouquet:hover .rose {
-    transform: scale(1.2);
+.red {
+    background-color: #f44336;
 }
 
-#rose-message {
-    font-size: 20px;
-    margin-top: 15px;
-    color: #b30000;
-    font-weight: bold;
+.blue {
+    background-color: #2196f3;
+}
+
+.yellow {
+    background-color: #ffeb3b;
+}
+
+.orange {
+    background-color: #ff9800;
+}
+
+.green {
+    background-color: #4caf50;
 }
