@@ -55,12 +55,14 @@ h1 {
 /* Animated Rose Bouquet */
     
 .bouquet-container {
-    display: flex;
-    justify-content: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+/* Heading styling */
 h1 {
     font-size: 2rem;
     color: #d81b60;
@@ -73,31 +75,17 @@ h1 {
     grid-template-columns: repeat(6, 20px);
     grid-gap: 1px;
     margin: 0 auto;
-    animation: float 3s infinite ease-in-out alternate; /* Floating effect */
 }
 
 .pixel {
     width: 20px;
     height: 20px;
-    opacity: 0; /* Initially hidden */
-    transform: scale(0.5); /* Start small */
-    animation: bloom 1.5s ease-in-out forwards;
-}
-
-/* Delay animation for different parts */
-.red, .dark-red {
-    animation-delay: 0.5s;
-}
-
-.green {
-    animation-delay: 1s;
 }
 
 .transparent {
     background-color: transparent;
 }
 
-/* Colors */
 .red {
     background-color: #f44336; /* Bright red */
 }
@@ -108,27 +96,6 @@ h1 {
 
 .green {
     background-color: #4caf50; /* Green for the stem */
-}
-
-/* Animations */
-@keyframes bloom {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
 }
 
 @keyframes fadeIn {
