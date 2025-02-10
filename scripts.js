@@ -19,6 +19,10 @@ function revealRoses() {
         setTimeout(() => {
             rose.classList.add("show"); // Add class to make roses appear
         }, index * 600); // Staggered blooming effect
+        setTimeout(() => {
+        document.getElementById("rose-message").classList.remove("hidden");
+        rose-message.classList.add("show"); // Show message
+    }, roses.length * 600 + 1000);
     });
 }
 // Run bouquet animation automatically on page load
