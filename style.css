@@ -53,7 +53,6 @@ h1 {
 .bouquet-container {
     text-align: center;
 }
-
 h1 {
     font-size: 2rem;
     color: #d81b60;
@@ -63,7 +62,7 @@ h1 {
 /* Pixel Art Styling */
 .pixel-art {
     display: grid;
-    grid-template-columns: repeat(7, 20px);
+    grid-template-columns: repeat(6, 20px);
     grid-gap: 1px;
     margin: 0 auto;
 }
@@ -78,21 +77,13 @@ h1 {
 }
 
 .red {
-    background-color: #f44336;
+    background-color: #b80f0a; /* Bright red */
 }
 
-.blue {
-    background-color: #2196f3;
-}
-
-.yellow {
-    background-color: #ffeb3b;
-}
-
-.orange {
-    background-color: #ff9800;
+.dark-red {
+    background-color: #9b191a; /* Dark red */
 }
 
 .green {
-    background-color: #4caf50;
+    background-color: #1e4620; /* Green for the stem */
 }
