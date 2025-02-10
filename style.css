@@ -50,9 +50,11 @@ h1 {
 }
 
 /* Animated Rose Bouquet */
+    
 .bouquet-container {
     text-align: center;
 }
+
 h1 {
     font-size: 2rem;
     color: #d81b60;
@@ -77,13 +79,13 @@ h1 {
 }
 
 .red {
-    background-color: #b80f0a; /* Bright red */
+    background-color: #f44336; /* Bright red */
 }
 
 .dark-red {
-    background-color: #9b191a; /* Dark red */
+    background-color: #b71c1c; /* Dark red */
 }
 
 .green {
-    background-color: #1e4620; /* Green for the stem */
+    background-color: #4caf50; /* Green for the stem */
 }
