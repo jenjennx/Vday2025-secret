@@ -1,7 +1,8 @@
+/* General Cute Pastel Theme */
 body {
-    font-family: 'Gill sans', sans-serif;
+    font-family:cursive;
     text-align: center;
-    background-color: #ffe6e6;
+    background-color: #ffeaf4;
     color: #d63384;
     margin: 0;
     padding: 20px;
@@ -10,15 +11,15 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-    background: white;
+    background: #fffaf5;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-family: Cursive;
-    font-size: 20px;
+    font-size: 24px;
+    color: #ff6699;
 }
 
 .hearts {
@@ -50,55 +51,72 @@ h1 {
     to { opacity: 1; }
 }
 
-/* Animated Rose Bouquet */
-    
+/* Bouquet Section */
 .bouquet-container {
-    text-align: center;
+    margin-top: 30px;
 }
 
-/* Heading styling */
-h1 {
-    font-size: 2rem;
-    color: #d81b60;
+.bouquet-text {
+    font-size: 18px;
+    color: #ff4d6d;
+    margin-bottom: 10px;
 }
 
-/* Pixel Art Styling */
-.pixel-art {
-    display: grid;
-    grid-template-columns: repeat(6, 20px);
-    grid-gap: 1px;
-    margin: 0 auto;
+/* Bouquet Arrangement */
+.bouquet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
 }
 
-.pixel {
-    width: 20px;
-    height: 20px;
+/* Roses */
+.rose-container {
+    display: flex;
+    gap: 8px;
 }
 
-.transparent {
-    background-color: transparent;
+.rose {
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 50%;
+    position: relative;
+    transform: scale(0); /* Start hidden */
+    transition: transform 0.5s ease-in-out;
 }
 
-.red {
-    background-color: #f44336; /* Bright red */
+/* Rose Colors */
+.rose.red {
+    background-color: #ff4d6d;
 }
 
-.dark-red {
-    background-color: #b71c1c; /* Dark red */
+.rose.pink {
+    background-color: #ffb3c6;
 }
 
-.green {
-    background-color: #4caf50; /* Green for the stem */
+.rose.peach {
+    background-color: #ff9999;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/* Rose Stems */
+.rose::after {
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+/* Rose Bloom Animation */
+.rose.show {
+    transform: scale(1);
+}
+
 /* Love Message Fade-In */
 #rose-message {
     font-size: 20px;
